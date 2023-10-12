@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROI 既存</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+      <h1>ROI 既存 Calculator!</h1>
+    <div class="ROI">
+        <div id="A">
+            <form id="ROI" action="https://formsubmit.co/maskey@jhtgroup.jp"　method="POST" >
+                
+                <!--既存のお客様お情報-->
+                <h2>A. 既存の会員数</h2>
+                <label for="A1">A1. 既存の会員数</label>
+                <br> <br>
+                <div class="slideContainer">
+                    0 <input type="range" min="0" max="10000" value="0" step="50" id="myRange" class="slider" onchange="multiply()"> 10000
+                    <p>会員数： <span name="A1" id="A1"></span></p>
+                </div>
+            <br>
+
+            <!--A2-->
+            <label for="A2">A2. 会員数の何割合ぐらいがEGYMを利用していますか？：</label>
+            <br>
+            <input type="number" name="A2" id="A2" value="50" step="5" onchange="multiply()">
+            <br> <br>
+            <hr>
+            <br>
+
+            <!--A3-->
+            <label class="L1">EGYMを利用会員数</label>
+            <input type="text" name="A3" id="A3" >
+            <br><br>
+            <hr color="red" size="5px">
+        　　
+            <!--B会費について情報-->
+            <h2>B. 既存会員の会費についての情報</h2>
+            <label for="B1">B2. EGYMアップセル会費：</label>
+            <br><br>
+            <div class="slideContainer1">
+                0 <input type="range" min="0" max="10000" value="0" step="100" id="myRange1" class="slider1" onchange="multiply()"> 10000
+                <p>EGYMアップセル： ¥<span id="B1" ></span></p>
+            </div>
+            <hr><br>
+
+            <label class="L2">EGYMアップセル料金：　　¥</label>
+            <input type="text" name="B2" id="B2">
+        <br><br>
+        <hr color="red" size="5px">
+        <br>
+
+        <!--C新規会員のアップセル会費-->
+        <h2>C. 新規会員</h2>
+        <label for="C1">C1. 月々のターゲット新会員：</label>
+        <br><br>
+        <div class="slideContainer2">
+           0 <input type="range" min="0" max="1000" value="0" step="10" id="myRange2" class="slider2" onchange="multiply()"> 1000
+            <p>新会員数： <span id="C1" ></span></p>
+        </div>
+        
+        <br>
+        <!--C2-->
+        <label for="C2">C2. 新規会員の何割ぐらいEGYMを利用しますか？: 
+            <br>
+           
+        <input type="number" name="C2" id="C2" value="50" step="5" onchange="multiply()">%
+        <br><br>
+        <hr >
+        <br>
+        <label class="L1">EGYMを利用会員数</label>
+        <input type="text" name="C3" id="C3" onchange="multiply()">
+        <br><br>
+        
+        <hr> <br>
+        <label class="L2">新規会員でEGYMアップセル会費</label>
+        <input type="text" name="C4" id="C4">
+        <br><br>
+
+
+        <hr color="red" size="5px">
+
+
+
+        <!--D メンバーアプリでの収入-->
+        <h2>D. メンバーのアプリでの収益</h2>
+        <!--D1-->
+        <labelfor="D2">D1. 年間の各メンバーのアプリ利用料金</label>
+        <br><br>
+        <div class="slideContainer3"> 
+            0 <input type="range" min="0" max="10000" value="0" step="100" id="myRange3" class="slider3" onchange="multiply()"> 10000
+            <p>アプリ利用料金： <span id="D1" ></span></p>
+        </div>
+        <p id="p5">※なしの場合は“なし”を選択して下さい！</p> 
+
+        <!--D2-->
+        <label for="D2">D2. アップセルの対象：</label>
+        <br>
+        <input type="radio" name="Rad" id="Rad1" value="0" onclick="getValue()"/> 全会員 
+        <br>
+        <input type="radio" name="Rad" id="Rad2" value="0" onclick="getValue()"/> EGYM利用者
+        <br>
+        <input type="radio" name="Rad" id="Rad3" value="0" onclick="getValue()"/> なし
+        <br><br>
+        <hr><br>      
+
+        <!--D3-->
+        <label class="L2">アプリによる年間の合計収入: ¥</label>
+        <label for="D3" id="D3" onclick="multiply()"></label>
+        <input type="hidden" name="D4" id="D4" onclick="multiply3()">
+        <br><br>
+        
+
+        <hr color="red" size="5px">
+
+        <!--E RFIDバンドについて-->
+        <h2>E. RFIDについて収益</h2>
+        <!--E1-->
+        <label for="E1">E1. RFIDバンド販売料金</label>
+        <br><br>
+        <div class="slideContainer5">
+            0 <input type="range" min="0" max="10000" value="0" step="100" id="myRange4" class="slider4" onchange="multiply()"> 10000
+            <p>RFID利用料金： <span id="E1" ></span></p>
+        </div>
+        
+        <p id="p5">※なしの場合は“なし”を選択して下さい！</p> 
+         
+
+        <!--E2-->
+        <label for="E2">E2. 対象者：</label>
+        <br>
+        <input type="radio" name="Radio" id="Radio1" value="0" onclick="getValue1()"/> 全会員 
+        <br>
+        <input type="radio" name="Radio" id="Radio2" value="0" onclick="getValue1()"/> EGYM利用者
+        <br>
+        <input type="radio" name="Radio" id="Radio3" value="0" onclick="getValue1()"/> なし
+        <br><br><hr><br>
+
+        <!--E3-->
+        <label class="L2">RFIDによる収入: ¥</label>
+        <label for="E3" id="E3" onclick="multiply()"></label>
+        <input type="hidden" name="E4" id="E4" onclick="multiply3()">
+        <br><br>
+
+        <hr color="red" size="5px">
+
+
+        <!--F　投資について-->
+        <h2>F. 投資について</h2>
+        
+        <label for="L1">F1. Smart Strength：</label>
+        <br><br>
+        
+        <div class="slideContainer6">
+           0 <input type="range" min="0" max="30" value="0" step="1" id="myRange6" class="slider6" onchange="multiply()"> 30
+        </div>
+            <div class="container">
+                <p>Smart Strength台数： <span id="F1" ></span></p>
+                <p>料金:</p>
+                ¥<input type="text" class="username" name="F14" id="F14" value="0" onchange="multiply()">
+                <button id="change" onclick="myfunction(1)" type="button" class="btn">合計</button>
+                <br>
+                <p id="p1">合計金額:</p>
+                ¥<input type="text" class="username1" name="F15" id="F15" value="0" onchange="multiply()" >
+            </div>
+              <br><br>
+
+        
+            <label for="L11">Leg Press:</label>            
+            <br><br>
+            <div class="slideContainer61">
+              0 <input type="range" min="0" max="10" value="0" step="1" id="myRange61" class="slider61" onchange="multiply()"> 10
+            </div>
+            <div class="container">    
+                <p>Leg Press台数： <span id="F11" ></span></p>
+                <p>料金:</p>
+                ¥<input type="text" class="F114" name="F114" id="F114" value="0" onchange="multiply()">
+                <button id="change1" onclick="myfunction1(1)" type="button" class="btn">合計</button>
+                <br>
+                <p id="p1">合計金額:</p>
+                ¥<input type="text" class="F115" name="F115" id="F115" value="0" >
+            </div>
+              
+            
+        
+        
+      
+        
+        
+        <br> <hr> <br>
+
+        <!--F2-->
+        <label for="L2">F2. Fitness Hub：</label>
+        <br><br>
+        <div class="slideContainer7">
+           0 <input type="range" min="0" max="10" value="0" step="1" id="myRange7" class="slider7" onchange="multiply()"> 10
+        </div>
+        <div class="container2">    
+            <p>Fitness Hub台数： <span id="F2" ></span></p>
+            <p>料金:</p>
+            ¥<input type="text" class="F24" name="F24" id="F24" value="0" onchange="multiply()" >
+            <button id="change2" onclick="myfunction2(1)" type="button" class="btn">合計</button>
+            <br>
+            <p id="p1">合計金額:</p>
+            ¥<input type="text" class="F25" name="F25" id="F25" value="0" >
+        </div>
+        <br> <hr> <br>
+        
+        <!--F3-->
+        <label for="L2">F3. Smart Flex：</label>
+        <br><br>
+        <div class="slideContainer8">
+           0 <input type="range" min="0" max="30" value="0" step="1" id="myRange8" class="slider8" onchange="multiply()"> 30
+        </div>
+        <div class="container3">
+            <p>Smart Flex台数： <span id="F3" ></span></p>
+            <p>料金:</p>
+            ¥<input type="text" class="F31" name="F31" id="F31" value="0" onchange="multiply()" >
+            <button id="change3" onclick="myfunction3(1)" type="button" class="btn">合計</button>
+            <br>
+            <p id="p1">合計金額:</p>
+            ¥<input type="text" class="F32" name="32" id="F32" value="0">
+        </div>
+        <br><hr><br>
+
+        <!--F4-->
+        <div class="container3">
+        <label class="L2">F4. RFID料金：</label> <br>
+        ¥<input type="text" class="F4" name="F4" id="F4" value="0" onchange="multiply()" >
+        <button id="change4" onclick="myfunction4(1)" type="button" class="btn">合計</button>
+        </div>
+        <br><br>
+
+        <br><hr><br>
+        <!--F5-->
+        <div class="container3">
+        <label class="L2">F5. Matrixマシン投資料金：</label> <br>
+        ¥<input type="text" class="F5" name="F5" id="F5" value="0" onchange="multiply()"  >
+        <button id="change5" onclick="myfunction5(1)" type="button" class="btn">合計</button>
+    </div>
+        <br>   <br> 
+
+        <br><hr><br>
+        <!--F6-->
+        <div class="container3">
+        <label class="L2">F6. その他投資料金：</label> <br>
+        ¥<input type="text" class="F6" name="F6" id="F6" value="0" onchange="multiply()" >
+        <button id="change6" onclick="myfunction6(1)" type="button" class="btn">合計</button>
+    </div>
+    <br>    <br>
+
+    <br><hr><br>
+
+       <!--F7-->
+       <div class="container3">
+        <label class="L2">F7. CSP：</label> <br>
+        ¥<input type="text" class="F7" name="F7" id="F7" value="0" onchange="multiply()" >
+        <button id="change7" onclick="myfunction7(1)" type="button" class="btn">合計</button>
+    </div>
+        <br><br><br>
+
+        <hr color="red" size="5px">
+        <br><br>
+
+        <h1>研修結果</h1>
+        <br><br><br>
+
+
+    <!--G1-->
+    <div class="container4">
+        <label class="L2">G1. 合計投資金額：</label>
+        <br><br>
+        ¥<input type="text" name="G1" id="G1" value="0" onchange="multiply()" >  
+        
+    </div>
+
+        <br><br><br><hr color="lightgrey" size="4px"><br><br><br>
+
+         <!--G2-->   
+         <div class="container6">
+            <label class="L2">G2. 合計収入金額：</label>
+            ¥<input type="text" name="G3" id="G3" value="0" onchange="multiply()" > / 月
+
+        </div>
+
+        <br><br><br><hr color="lightgrey" size="4px"><br><br><br>
+
+     <!--G2-->   
+
+        <div class="container5">
+            <label class="L2">G3. 法定耐用年数(3年)：</label>
+            ¥<input type="text" name="G2" id="G2" value="0" onchange="multiply()" > / 月
+
+        </div>
+
+        <br><br><br><hr color="lightgrey" size="4px"><br><br><br>
+
+         <!--G31-->
+         <div class="container9">
+           
+            <input type="hidden" name="G31" id="G31" value="0" onchange="multiply()">
+        </div>
+        
+   
+    
+
+     <!--G4-->   
+        <div class="container7">
+            <label class="L2">G4. 損益分岐点までの期間：</label>
+            <input type="text" name="G4" id="G4" value="0" onchange="multiply()" > ヶ月
+
+        </div>
+        <br><br><br><hr color="lightgrey" size="4px"><br><br><br>
+
+    <!--G5-->
+        <div class="container8">
+            <label class="L2">G5. 投資から5年後: </label>
+            <input type="hidden" name="G5" id="G5" value="0" onchange="multiply()" >
+            <input type="text" name="G15" id="G15" value="0" onchange="multiply()" > %
+
+        </div>
+        <br><br><br><hr color="red" size="4px">
+
+
+        <button type="submit" class="btn1">submit</button>
+
+                   
+
+        
+        
+
+            </form>
+
+        </div>        
+    
+        <!--id div-->
+    </div>
+    <!--main div-->
+    </div>
+    
+
+     <script type="text/javascript">
+        function multiply(){
+            A1=  parseInt(ROI.myRange.value);
+            A2 = parseInt(ROI.A2.value);
+            result = A1*A2/100;
+            ROI.A3.value=result;
+
+            A3= parseInt(ROI.A3.value);
+            B1= parseInt(ROI.myRange1.value);       
+            result1 = (A3*B1);
+            result1 = result1.toLocaleString("en-US");
+            ROI.B2.value = result1;
+
+            C1 = parseInt(ROI.myRange2.value);
+            C2 = parseInt(ROI.C2.value);
+            result2 = C1*C2/100;
+            ROI.C3.value = result2;
+            
+            B1= parseInt(ROI.myRange1.value);
+            C3= parseInt(ROI.C3.value);
+            result3 = (B1*C3);
+            result3 = result3.toLocaleString("en-US");
+            ROI.C4.value = result3;
+
+         
+            
+
+            F1 = parseFloat (ROI.myRange6.value);
+            F14 = parseFloat (ROI.F14.value.replace(/,/g,""));           
+            result7 = (F1*F14);
+            result7 = result7.toLocaleString("en-US");
+            ROI.F15.value = result7;
+
+            F11 = parseInt (ROI.myRange61.value);
+            F114 = parseInt (ROI.F114.value.replace(/,/g,""));
+            result8 = (F11*F114);
+            result8 = result8.toLocaleString("en-US");
+            ROI.F115.value = result8;
+
+            F2 = parseInt (ROI.myRange7.value);
+            F24 = parseInt (ROI.F24.value.replace(/,/g,""));
+            result9 = (F2*F24);
+            result9 = result9.toLocaleString("en-US");
+            ROI.F25.value = result9;
+
+            F3 = parseInt (ROI.myRange8.value);
+            F31 = parseInt (ROI.F31.value.replace(/,/g,""));
+            result10 = (F3*F31);
+            result10 = result10.toLocaleString("en-US");
+            ROI.F32.value = result10;
+
+            F15 = parseInt(ROI.F15.value.replace(/,/g, ""));
+            F115 = parseInt(ROI.F115.value.replace(/,/g, ""));
+            F25 = parseInt(ROI.F25.value.replace(/,/g, ""));
+            F32 = parseInt(ROI.F32.value.replace(/,/g, ""));
+            F4 = parseInt(ROI.F4.value.replace(/,/g, ""));
+            F5 = parseInt(ROI.F5.value.replace(/,/g, ""));
+            F6 = parseInt(ROI.F6.value.replace(/,/g, ""));
+            F7 = parseInt(ROI.F7.value.replace(/,/g, ""));
+            result11 = F15+F115+F25+F32+F4+F5+F6+F7;
+            result11 = result11.toLocaleString("en-US")
+            ROI.G1.value = result11;
+
+            G1 = parseInt(ROI.G1.value.replace(/,/g, ""));
+            result12 = G1/36;
+            result12 = result12.toLocaleString("en-US");
+            ROI.G2.value = result12;
+
+          
+
+            G1 = parseInt(ROI.G1.value.replace(/,/g, ""));
+            G3 = parseInt(ROI.G3.value.replace(/,/g, ""));
+            result14 = G1/G3;
+            result14 = result14.toLocaleString("en-US");
+            ROI.G4.value = result14;
+            result15 = (G3*60)-G1;
+            result15 = result15.toLocaleString("en-US");
+            ROI.G5.value = result15;
+
+            G5= parseInt(ROI.G5.value.replace(/,/g, ""));
+            result16 = (G5/G1)*100;
+            result16 = result16.toLocaleString("en-US");
+            ROI.G15.value = result16;
+
+            G4=parseInt(ROI.G4.value);
+            G4=G4.toFixed(1);
+
+            
+
+        
+        }
+
+        function getValue(){
+            D1 = parseInt(ROI.myRange3.value);
+            A1 = parseInt(ROI.myRange.value);
+            C1 = parseInt(ROI.myRange2.value);
+            A3 = parseInt(ROI.A3.value);
+            C3 = parseInt(ROI.C3.value);
+            result4 = ((A1+C1)*D1);
+            result5 = ((A3+C3)*D1);
+            ROI.Rad1.value = result4;
+            ROI.Rad2.value = result5;
+            var data = document.getElementsByName("Rad");
+            var i;
+            for(i=0; i<=data.length; i++){
+                if(data[i].checked){
+                    document.getElementById("D3").innerHTML=data[i].value;
+                    
+                    ROI.D4.value = document.getElementById("D3").innerHTML;
+                    D4 = parseInt(ROI.D4.value);
+                    
+
+                }
+            }
+          
+
+
+           }
+
+           function getValue1(){
+            E1 = parseInt(ROI.myRange4.value);
+            A1 = parseInt(ROI.myRange.value);
+            C1 = parseInt(ROI.myRange2.value);
+            A3 = parseInt(ROI.A3.value);
+            C3 = parseInt(ROI.C3.value);
+            result6 = (A1+C1)*E1;
+            result7 = (A3+C3)*E1;
+            ROI.Radio1.value = result6;
+            ROI.Radio2.value = result7;
+            var data = document.getElementsByName("Radio");
+            var i;
+            for(i=0; i<=data.length; i++) {
+                if (data[i].checked){
+                    document.getElementById("E3").innerHTML= data[i].value;
+                    ROI.E4.value = document.getElementById("E3").innerHTML ;
+                    E4 = parseInt(ROI.E4.value);
+                    result30 = E4 + D4;
+                    result30 = result30.toLocaleString("en-US");
+                    ROI.G31.value = result30;
+                    G31 = parseInt(ROI.G31.value);
+                    B2 = parseInt(ROI.B2.value.replace(/,/g, ""));
+            C4 = parseInt(ROI.C4.value.replace(/,/g, "")); 
+            G31 = parseInt(ROI.G31.value.replace(/,/g, ""));
+            result13 = B2+C4+G31;
+            result13 = result13.toLocaleString("en-US");
+            ROI.G3.value = result13;
+                }
+
+               
+          
+            }
+
+           }  
+
+          
+          
+          
+
+     </script>
+     
+           <script>
+    var count = 0;
+    function myfunction (x){
+        var x;
+           if (x == 1){
+            count = count+1;
+            
+        }
+        if (count == 1){
+            document.getElementById("change").style.background = "yellow";
+        }
+       
+        else if (count ==2){
+            
+            document.getElementById("change").style.background = "lightgrey";
+                       
+                document.querySelector(".username").value ="0";
+                document.querySelector(".username1").value ="0";
+                document.body.classList.remove("active");   
+                F15 = parseInt(ROI.F15.value.replace(/,/g, ""));
+            F115 = parseInt(ROI.F115.value.replace(/,/g, ""));
+            F25 = parseInt(ROI.F25.value.replace(/,/g, ""));
+            F32 = parseInt(ROI.F32.value.replace(/,/g, ""));
+            F4 = parseInt(ROI.F4.value.replace(/,/g, ""));
+            F5 = parseInt(ROI.F5.value.replace(/,/g, ""));
+            F6 = parseInt(ROI.F6.value.replace(/,/g, ""));
+            F7 = parseInt(ROI.F7.value.replace(/,/g, ""));
+            result11 = F15+F115+F25+F32+F4+F5+F6+F7;
+            result11 = result11.toLocaleString("en-US")
+            ROI.G1.value = result11;
+
+            G1 = parseInt(ROI.G1.value.replace(/,/g, ""));
+            result12 = G1/36;
+            result12 = result12.toLocaleString("en-US");
+            ROI.G2.value = result12;   
+            
+            G1 = parseInt(ROI.G1.value.replace(/,/g, ""));
+            G3 = parseInt(ROI.G3.value.replace(/,/g, ""));
+            result14 = G1/G3;
+            result14 = result14.toLocaleString("en-US");
+            ROI.G4.value = result14;
+            result15 = (G3*60)-G1;
+            result15 = result15.toLocaleString("en-US");
+            ROI.G5.value = result15;
+
+            G5= parseInt(ROI.G5.value.replace(/,/g, ""));
+            result16 = (G5/G1)*100;
+            result16 = result16.toLocaleString("en-US");
+            ROI.G15.value = result16;
+           
+            count =0;
+        }
+      
+    }
+</script>
+
+<script>
+    var count1 = 0;
+    function myfunction1 (x){
+        var x;
+        if (x == 1){
+            count1 = count1+1;
+            
+        }
+        if (count1 == 1){
+            document.getElementById("change1").style.background = "yellow";
+        }
+
+        else if (count1 ==2){
+            document.getElementById("change1").style.background = "lightgrey";
+
+            document.querySelector(".F114").value ="0";
+                document.querySelector(".F115").value ="0";
+                document.body.classList.remove("active");
+                F15 = parseInt(ROI.F15.value.replace(/,/g, ""));
+            F115 = parseInt(ROI.F115.value.replace(/,/g, ""));
+            F25 = parseInt(ROI.F25.value.replace(/,/g, ""));
+            F32 = parseInt(ROI.F32.value.replace(/,/g, ""));
+            F4 = parseInt(ROI.F4.value.replace(/,/g, ""));
+            F5 = parseInt(ROI.F5.value.replace(/,/g, ""));
+            F6 = parseInt(ROI.F6.value.replace(/,/g, ""));
+            F7 = parseInt(ROI.F7.value.replace(/,/g, ""));
+            result11 = F15+F115+F25+F32+F4+F5+F6+F7;
+            result11 = result11.toLocaleString("en-US")
+            ROI.G1.value = result11;
+
+            G1 = parseInt(ROI.G1.value.replace(/,/g, ""));
+            result12 = G1/36;
+            result12 = result12.toLocaleString("en-US");
+            ROI.G2.value = result12; 
+
+            G1 = parseInt(ROI.G1.value.replace(/,/g, ""));
+            G3 = parseInt(ROI.G3.value.replace(/,/g, ""));
+            result14 = G1/G3;
+            result14 = result14.toLocaleString("en-US");
+            ROI.G4.value = result14;
+            result15 = (G3*60)-G1;
+            result15 = result15.toLocaleString("en-US");
+            ROI.G5.value = result15;
+
+            G5= parseInt(ROI.G5.value.replace(/,/g, ""));
+            result16 = (G5/G1)*100;
+            result16 = result16.toLocaleString("en-US");
+            ROI.G15.value = result16;
+            count1 = 0;
+        }
+    }
+</script>
+
+<script>
+    var count2 = 0;
+    function myfunction2 (x){
+        var x;
+        if (x == 1){
+            count2 = count2+1;
+            
+        }
+        if (count2 == 1){
+            document.getElementById("change2").style.background = "yellow";
+        }
+
+        else if (count2 ==2){
+            document.getElementById("change2").style.background = "lightgrey";
+            document.querySelector(".F24").value ="0";
+                document.querySelector(".F25").value ="0";
+                document.body.classList.remove("active"); 
+                F15 = parseInt(ROI.F15.value.replace(/,/g, ""));
+            F115 = parseInt(ROI.F115.value.replace(/,/g, ""));
+            F25 = parseInt(ROI.F25.value.replace(/,/g, ""));
+            F32 = parseInt(ROI.F32.value.replace(/,/g, ""));
+            F4 = parseInt(ROI.F4.value.replace(/,/g, ""));
+            F5 = parseInt(ROI.F5.value.replace(/,/g, ""));
+            F6 = parseInt(ROI.F6.value.replace(/,/g, ""));
+            F7 = parseInt(ROI.F7.value.replace(/,/g, ""));
+            result11 = F15+F115+F25+F32+F4+F5+F6+F7;
+            result11 = result11.toLocaleString("en-US")
+            ROI.G1.value = result11;
+
+            G1 = parseInt(ROI.G1.value.replace(/,/g, ""));
+            result12 = G1/36;
+            result12 = result12.toLocaleString("en-US");
+            ROI.G2.value = result12;
+
+            G1 = parseInt(ROI.G1.value.replace(/,/g, ""));
+            G3 = parseInt(ROI.G3.value.replace(/,/g, ""));
+            result14 = G1/G3;
+            result14 = result14.toLocaleString("en-US");
+            ROI.G4.value = result14;
+            result15 = (G3*60)-G1;
+            result15 = result15.toLocaleString("en-US");
+            ROI.G5.value = result15;
+
+            G5= parseInt(ROI.G5.value.replace(/,/g, ""));
+            result16 = (G5/G1)*100;
+            result16 = result16.toLocaleString("en-US");
+            ROI.G15.value = result16;
+            count2 = 0;
+        }
+    }
+</script>
+
+<script>
+    var count3 = 0;
+    function myfunction3 (x){
+        var x;
+        if (x == 1){
+            count3 = count3+1;
+            
+        }
+        if (count3 == 1){
+            document.getElementById("change3").style.background = "yellow";
+        }
+
+        else if (count3 ==2){
+            document.getElementById("change3").style.background = "lightgrey";
+            document.querySelector(".F31").value ="0";
+                document.querySelector(".F32").value ="0";
+                document.body.classList.remove("active"); 
+                F15 = parseInt(ROI.F15.value.replace(/,/g, ""));
+            F115 = parseInt(ROI.F115.value.replace(/,/g, ""));
+            F25 = parseInt(ROI.F25.value.replace(/,/g, ""));
+            F32 = parseInt(ROI.F32.value.replace(/,/g, ""));
+            F4 = parseInt(ROI.F4.value.replace(/,/g, ""));
+            F5 = parseInt(ROI.F5.value.replace(/,/g, ""));
+            F6 = parseInt(ROI.F6.value.replace(/,/g, ""));
+            F7 = parseInt(ROI.F7.value.replace(/,/g, ""));
+            result11 = F15+F115+F25+F32+F4+F5+F6+F7;
+            result11 = result11.toLocaleString("en-US")
+            ROI.G1.value = result11;
+
+            G1 = parseInt(ROI.G1.value.replace(/,/g, ""));
+            result12 = G1/36;
+            result12 = result12.toLocaleString("en-US");
+            ROI.G2.value = result12;
+
+            G1 = parseInt(ROI.G1.value.replace(/,/g, ""));
+            G3 = parseInt(ROI.G3.value.replace(/,/g, ""));
+            result14 = G1/G3;
+            result14 = result14.toLocaleString("en-US");
+            ROI.G4.value = result14;
+            result15 = (G3*60)-G1;
+            result15 = result15.toLocaleString("en-US");
+            ROI.G5.value = result15;
+
+            G5= parseInt(ROI.G5.value.replace(/,/g, ""));
+            result16 = (G5/G1)*100;
+            result16 = result16.toLocaleString("en-US");
+            ROI.G15.value = result16;
+            count3 = 0;
+        }
+    }
+
+    
+</script>
+
+<script>
+    var count4 = 0;
+    function myfunction4 (x){
+        var x;
+        if (x == 1){
+            count4 = count4+1;
+            
+        }
+        if (count4 == 1){
+            document.getElementById("change4").style.background = "yellow";
+        }
+
+        else if (count4 ==2){
+            document.getElementById("change4").style.background = "lightgrey";
+            document.querySelector(".F4").value ="0";
+                document.body.classList.remove("active"); 
+                F15 = parseInt(ROI.F15.value.replace(/,/g, ""));
+            F115 = parseInt(ROI.F115.value.replace(/,/g, ""));
+            F25 = parseInt(ROI.F25.value.replace(/,/g, ""));
+            F32 = parseInt(ROI.F32.value.replace(/,/g, ""));
+            F4 = parseInt(ROI.F4.value.replace(/,/g, ""));
+            F5 = parseInt(ROI.F5.value.replace(/,/g, ""));
+            F6 = parseInt(ROI.F6.value.replace(/,/g, ""));
+            F7 = parseInt(ROI.F7.value.replace(/,/g, ""));
+            result11 = F15+F115+F25+F32+F4+F5+F6+F7;
+            result11 = result11.toLocaleString("en-US")
+            ROI.G1.value = result11;
+
+            G1 = parseInt(ROI.G1.value.replace(/,/g, ""));
+            result12 = G1/36;
+            result12 = result12.toLocaleString("en-US");
+            ROI.G2.value = result12;
+
+            G1 = parseInt(ROI.G1.value.replace(/,/g, ""));
+            G3 = parseInt(ROI.G3.value.replace(/,/g, ""));
+            result14 = G1/G3;
+            result14 = result14.toLocaleString("en-US");
+            ROI.G4.value = result14;
+            result15 = (G3*60)-G1;
+            result15 = result15.toLocaleString("en-US");
+            ROI.G5.value = result15;
+
+            G5= parseInt(ROI.G5.value.replace(/,/g, ""));
+            result16 = (G5/G1)*100;
+            result16 = result16.toLocaleString("en-US");
+            ROI.G15.value = result16;
+            count4 = 0;
+        }
+    }
+
+    
+</script>
+
+<script>
+    var count5 = 0;
+    function myfunction5 (x){
+        var x;
+        if (x == 1){
+            count5= count5+1;
+            
+        }
+        if (count5 == 1){
+            document.getElementById("change5").style.background = "yellow";
+        }
+
+        else if (count5 ==2){
+            document.getElementById("change5").style.background = "lightgrey";
+            document.querySelector(".F5").value ="0";
+                document.body.classList.remove("active");
+                F15 = parseInt(ROI.F15.value.replace(/,/g, ""));
+            F115 = parseInt(ROI.F115.value.replace(/,/g, ""));
+            F25 = parseInt(ROI.F25.value.replace(/,/g, ""));
+            F32 = parseInt(ROI.F32.value.replace(/,/g, ""));
+            F4 = parseInt(ROI.F4.value.replace(/,/g, ""));
+            F5 = parseInt(ROI.F5.value.replace(/,/g, ""));
+            F6 = parseInt(ROI.F6.value.replace(/,/g, ""));
+            F7 = parseInt(ROI.F7.value.replace(/,/g, ""));
+            result11 = F15+F115+F25+F32+F4+F5+F6+F7;
+            result11 = result11.toLocaleString("en-US")
+            ROI.G1.value = result11;
+
+            G1 = parseInt(ROI.G1.value.replace(/,/g, ""));
+            result12 = G1/36;
+            result12 = result12.toLocaleString("en-US");
+            ROI.G2.value = result12;
+
+            G1 = parseInt(ROI.G1.value.replace(/,/g, ""));
+            G3 = parseInt(ROI.G3.value.replace(/,/g, ""));
+            result14 = G1/G3;
+            result14 = result14.toLocaleString("en-US");
+            ROI.G4.value = result14;
+            result15 = (G3*60)-G1;
+            result15 = result15.toLocaleString("en-US");
+            ROI.G5.value = result15;
+
+            G5= parseInt(ROI.G5.value.replace(/,/g, ""));
+            result16 = (G5/G1)*100;
+            result16 = result16.toLocaleString("en-US");
+            ROI.G15.value = result16;
+            count5 = 0;
+        }
+    }
+
+    
+</script>
+
+<script>
+    var count6 = 0;
+    function myfunction6 (x){
+        var x;
+        if (x == 1){
+            count6 = count6+1;
+            
+        }
+        if (count6 == 1){
+            document.getElementById("change6").style.background = "yellow";
+        }
+
+        else if (count6 ==2){
+            document.getElementById("change6").style.background = "lightgrey";
+            document.querySelector(".F6").value ="0";
+                document.body.classList.remove("active");
+                F15 = parseInt(ROI.F15.value.replace(/,/g, ""));
+            F115 = parseInt(ROI.F115.value.replace(/,/g, ""));
+            F25 = parseInt(ROI.F25.value.replace(/,/g, ""));
+            F32 = parseInt(ROI.F32.value.replace(/,/g, ""));
+            F4 = parseInt(ROI.F4.value.replace(/,/g, ""));
+            F5 = parseInt(ROI.F5.value.replace(/,/g, ""));
+            F6 = parseInt(ROI.F6.value.replace(/,/g, ""));
+            F7 = parseInt(ROI.F7.value.replace(/,/g, ""));
+            result11 = F15+F115+F25+F32+F4+F5+F6+F7;
+            result11 = result11.toLocaleString("en-US")
+            ROI.G1.value = result11;
+
+            G1 = parseInt(ROI.G1.value.replace(/,/g, ""));
+            result12 = G1/36;
+            result12 = result12.toLocaleString("en-US");
+            ROI.G2.value = result12;
+
+            G1 = parseInt(ROI.G1.value.replace(/,/g, ""));
+            G3 = parseInt(ROI.G3.value.replace(/,/g, ""));
+            result14 = G1/G3;
+            result14 = result14.toLocaleString("en-US");
+            ROI.G4.value = result14;
+            result15 = (G3*60)-G1;
+            result15 = result15.toLocaleString("en-US");
+            ROI.G5.value = result15;
+
+            G5= parseInt(ROI.G5.value.replace(/,/g, ""));
+            result16 = (G5/G1)*100;
+            result16 = result16.toLocaleString("en-US");
+            ROI.G15.value = result16;
+            count6 = 0;
+        }
+    }
+
+    
+</script>
+
+<script>
+    var count7 = 0;
+    function myfunction7 (x){
+        var x;
+        if (x == 1){
+            count7 = count7+1;
+            
+        }
+        if (count7 == 1){
+            document.getElementById("change7").style.background = "yellow";
+        }
+
+        else if (count7 ==2){
+            document.getElementById("change7").style.background = "lightgrey";
+            document.querySelector(".F7").value ="0";
+                document.body.classList.remove("active");
+
+                F15 = parseInt(ROI.F15.value.replace(/,/g, ""));
+            F115 = parseInt(ROI.F115.value.replace(/,/g, ""));
+            F25 = parseInt(ROI.F25.value.replace(/,/g, ""));
+            F32 = parseInt(ROI.F32.value.replace(/,/g, ""));
+            F4 = parseInt(ROI.F4.value.replace(/,/g, ""));
+            F5 = parseInt(ROI.F5.value.replace(/,/g, ""));
+            F6 = parseInt(ROI.F6.value.replace(/,/g, ""));
+            F7 = parseInt(ROI.F7.value.replace(/,/g, ""));
+            result11 = F15+F115+F25+F32+F4+F5+F6+F7;
+            result11 = result11.toLocaleString("en-US")
+            ROI.G1.value = result11;
+
+            G1 = parseInt(ROI.G1.value.replace(/,/g, ""));
+            result12 = G1/36;
+            result12 = result12.toLocaleString("en-US");
+            ROI.G2.value = result12;
+
+            G1 = parseInt(ROI.G1.value.replace(/,/g, ""));
+            G3 = parseInt(ROI.G3.value.replace(/,/g, ""));
+            result14 = G1/G3;
+            result14 = result14.toLocaleString("en-US");
+            ROI.G4.value = result14;
+            result15 = (G3*60)-G1;
+            result15 = result15.toLocaleString("en-US");
+            ROI.G5.value = result15;
+
+            G5= parseInt(ROI.G5.value.replace(/,/g, ""));
+            result16 = (G5/G1)*100;
+            result16 = result16.toLocaleString("en-US");
+            ROI.G15.value = result16;
+            count7 = 0;
+        }
+    }
+
+    
+</script>
+     <script>
+        var slider = document.getElementById("myRange");
+        var output  = document.getElementById("A1");
+        output.innerHTML = slider.value;
+        slider.oninput = function(){
+            output.innerHTML = this.value;
+        }
+     </script>
+     <script>
+        var slider1 = document.getElementById("myRange1");
+        var output1 = document.getElementById("B1");
+        output1.innerHTML = slider1.value;
+        slider1.oninput = function(){
+            output1.innerHTML = this.value;
+        }
+     </script>
+
+     <script>
+        var slider2 = document.getElementById("myRange2");
+        var output2 = document.getElementById("C1");
+        output2.innerHTML = slider2.value;
+        slider2.oninput = function(){
+            output2.innerHTML = this.value;
+        }
+     </script>
+
+     <script>
+        var slider3 = document.getElementById("myRange3");
+        var output3 = document.getElementById("D1");
+        output3.innerHTML = slider3.value;
+        slider3.oninput = function(){
+            output3.innerHTML = this.value;
+        }
+     </script>
+
+     <script>
+        var slider4 = document.getElementById("myRange4");
+        var output4 = document.getElementById("E1");
+        output4.innerHTML = slider4.value;
+        slider4.oninput = function(){
+            output4.innerHTML = this.value;        }
+     </script>
+
+<script>
+    var slider6 = document.getElementById("myRange6");
+    var output6 = document.getElementById("F1");
+    output6.innerHTML = slider6.value;
+    slider6.oninput = function(){
+         output6.innerHTML = this.value;
+    }
+</script>   
+
+<script>
+    var slider61 = document.getElementById("myRange61");
+    var output61 = document.getElementById("F11");
+    output61.innerHTML = slider61.value;
+    slider61.oninput = function(){
+        output61.innerHTML = this.value;
+    }
+</script>
+
+<script>
+    var slider7 = document.getElementById("myRange7");
+    var output7 = document.getElementById("F2");
+    output7.innerHTML = slider7.value;
+    slider7.oninput = function(){
+         output7.innerHTML = this.value;
+    }
+        </script>    
+  
+  <script>
+    var slider8 = document.getElementById("myRange8");
+    var output8 = document.getElementById("F3");
+    output8.innerHTML = slider8.value;
+    slider8.oninput = function(){
+         output8.innerHTML = this.value;
+    }
+   </script>
+
+   <script>
+   
+   </script>
+
+
+<!--Input Text = using comma-->
+        </script>  
+     <script type="text/javascript">
+        
+        var inputField = document.querySelector('#F14')
+    inputField.onkeyup = function(){
+       var removeChar = this.value.replace(/[^0-9\.]/g, '')
+
+       var removeDot = removeChar.replace(/\./g, '')
+       this.value = removeDot
+
+       var formatedNumber = this.value.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+      
+      this.value = formatedNumber
+
+    }
+</script>   
+       
+      
+
+      <script type="text/javascript">
+        
+        var inputField = document.querySelector('#F114')
+    inputField.onkeyup = function(){
+       var removeChar = this.value.replace(/[^0-9\.]/g, '')
+
+       var removeDot = removeChar.replace(/\./g, '')
+       this.value = removeDot
+
+       var formatedNumber = this.value.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+      
+      this.value = formatedNumber
+
+    }
+</script>
+
+
+<script type="text/javascript">
+        
+    var inputField = document.querySelector('#F24')
+inputField.onkeyup = function(){
+   var removeChar = this.value.replace(/[^0-9\.]/g, '')
+
+   var removeDot = removeChar.replace(/\./g, '')
+   this.value = removeDot
+
+   var formatedNumber = this.value.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+  
+  this.value = formatedNumber
+
+}
+</script>
+
+<script type="text/javascript">
+        
+    var inputField = document.querySelector('#F31')
+inputField.onkeyup = function(){
+   var removeChar = this.value.replace(/[^0-9\.]/g, '')
+
+   var removeDot = removeChar.replace(/\./g, '')
+   this.value = removeDot
+
+   var formatedNumber = this.value.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+  
+  this.value = formatedNumber
+
+}
+</script>
+
+<script type="text/javascript">
+        
+    var inputField = document.querySelector('#F4')
+inputField.onkeyup = function(){
+   var removeChar = this.value.replace(/[^0-9\.]/g, '')
+
+   var removeDot = removeChar.replace(/\./g, '')
+   this.value = removeDot
+
+   var formatedNumber = this.value.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+  
+  this.value = formatedNumber
+
+}
+</script>
+
+<script type="text/javascript">
+        
+    var inputField = document.querySelector('#F5')
+inputField.onkeyup = function(){
+   var removeChar = this.value.replace(/[^0-9\.]/g, '')
+
+   var removeDot = removeChar.replace(/\./g, '')
+   this.value = removeDot
+
+   var formatedNumber = this.value.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+  
+  this.value = formatedNumber
+
+}
+</script>
+
+<script type="text/javascript">
+        
+    var inputField = document.querySelector('#F6')
+inputField.onkeyup = function(){
+   var removeChar = this.value.replace(/[^0-9\.]/g, '')
+
+   var removeDot = removeChar.replace(/\./g, '')
+   this.value = removeDot
+
+   var formatedNumber = this.value.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+  
+  this.value = formatedNumber
+
+}
+</script>
+
+<script type="text/javascript">
+        
+    var inputField = document.querySelector('#F7')
+inputField.onkeyup = function(){
+   var removeChar = this.value.replace(/[^0-9\.]/g, '')
+
+   var removeDot = removeChar.replace(/\./g, '')
+   this.value = removeDot
+
+   var formatedNumber = this.value.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+  
+  this.value = formatedNumber
+
+}
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

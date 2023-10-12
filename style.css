@@ -1,0 +1,402 @@
+h1{
+    text-align: center;
+}
+
+div.ROI{
+    background-color: light grey;
+    width: 80%;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 2px 2px 15px;
+    margin: 30px auto 0px auto;
+    padding-left: 15px;
+    padding-bottom: 20px;
+    padding-right: 15px;
+}
+
+.L2{
+    font-size: 24px;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+
+.label{
+    font-weight: bold;
+}
+
+
+#p1{
+    font-size: 24px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+#p5{
+    color: red;
+    font-weight: bold;
+}
+
+#B2,#C4, #D3, #E3, #F15, #F115, #F25, #F32, #F4, #F5, #F6, #F7, #G1, #G2, #G3, 
+#G4, #G15, #A1, #A3, #B1, #C1, #C3, #D1, #E1, #F1, #F11, #F14, #F114, #F2, #F24, #F3, #F31{
+    font-size: 28px;
+    color: orange;
+    font-weight: bold;
+    
+}
+
+#change, #change1, #change2, #change3, #change4, #change5, #change6, #change7{
+    cursor : pointer;
+}
+
+
+.slideContainer{
+    width: 75%;
+   }
+   
+   
+   
+   .slider{
+       -webkit-appearance: none;
+       width: 60%;
+       height: 10px;
+       background: linear-gradient(90deg, rgb(214, 214, 214), rgb(214, 214, 214));
+       outline:  none;
+       opacity: 0.7;
+       -webkit-transition: 0.2s;
+       transition: opacity 0.2s;
+       border-radius: 12px;
+       box-shadow: 0px 1px 10px 1px black;
+   }
+   
+   .slider:hover{
+       opacity: 1;
+   }
+   
+   .slider::-webkit-slider-thumb{
+       -webkit-appearance: none;
+       appearance: none;
+       width: 20px;
+       height: 20px;
+       background: black;
+       border-radius: 50%;
+       cursor: pointer;
+   }
+
+
+
+
+
+   .slideContainer1{
+    width: 75%;
+   }
+   
+   .slider1{
+       -webkit-appearance: none;
+       width: 60%;
+       height: 10px;
+       background: linear-gradient(90deg, rgb(214, 214, 214), rgb(214, 214, 214));
+       outline:  none;
+       opacity: 0.7;
+       -webkit-transition: 0.2s;
+       transition: opacity 0.2s;
+       border-radius: 12px;
+       box-shadow: 0px 1px 10px 1px black;
+   }
+   
+   .slider1:hover{
+       opacity: 1;
+   }
+   
+   .slider1::-webkit-slider-thumb{
+       -webkit-appearance: none;
+       appearance: none;
+       width: 20px;
+       height: 20px;
+       background: black;
+       border-radius: 50%;
+       cursor: pointer;
+   }
+   
+
+
+
+   .slideContainer2{
+    width: 75%;
+   }
+   
+   .slider2{
+       -webkit-appearance: none;
+       width: 60%;
+       height: 10px;
+       background: linear-gradient(90deg, rgb(214, 214, 214), rgb(214, 214, 214));
+       outline:  none;
+       opacity: 0.7;
+       -webkit-transition: 0.2s;
+       transition: opacity 0.2s;
+       border-radius: 12px;
+       box-shadow: 0px 1px 10px 1px black;
+   }
+   
+   .slider2:hover{
+       opacity: 1;
+   }
+   
+   .slider2::-webkit-slider-thumb{
+       -webkit-appearance: none;
+       appearance: none;
+       width: 20px;
+       height: 20px;
+       background: black;
+       border-radius: 50%;
+       cursor: pointer;
+   }
+
+
+ 
+   .slideContainer3{
+    width: 75%;
+   }
+   
+   .slider3{
+       -webkit-appearance: none;
+       width: 60%;
+       height: 10px;
+       background: linear-gradient(90deg, rgb(214, 214, 214), rgb(214, 214, 214));
+       outline:  none;
+       opacity: 0.7;
+       -webkit-transition: 0.2s;
+       transition: opacity 0.2s;
+       border-radius: 12px;
+       box-shadow: 0px 1px 10px 1px black;
+   }
+   
+   .slider3:hover{
+       opacity: 1;
+   }
+   
+   .slider3::-webkit-slider-thumb{
+       -webkit-appearance: none;
+       appearance: none;
+       width: 20px;
+       height: 20px;
+       background: black;
+       border-radius: 50%;
+       cursor: pointer;
+   }
+
+
+   .slideContainer4{
+    width: 75%;
+   }
+   
+   .slider4{
+       -webkit-appearance: none;
+       width: 45%;
+       height: 10px;
+       background: linear-gradient(90deg, rgb(214, 214, 214), rgb(214, 214, 214));
+       outline:  none;
+       opacity: 0.7;
+       -webkit-transition: 0.2s;
+       transition: opacity 0.2s;
+       border-radius: 12px;
+       box-shadow: 0px 1px 10px 1px black;
+   }
+   
+   .slider4:hover{
+       opacity: 1;
+   }
+   
+   .slider4::-webkit-slider-thumb{
+       -webkit-appearance: none;
+       appearance: none;
+       width: 20px;
+       height: 20px;
+       background: black;
+       border-radius: 50%;
+       cursor: pointer;
+   }
+
+
+
+   .slideContainer6{
+    width: 75%;
+   }
+   .slider6{
+       -webkit-appearance: none;
+       width: 60%;
+       height: 10px;
+       background: linear-gradient(90deg, rgb(214, 214, 214), rgb(214, 214, 214));
+       outline:  none;
+       opacity: 0.7;
+       -webkit-transition: 0.2s;
+       transition: opacity 0.2s;
+       border-radius: 12px;
+       box-shadow: 0px 1px 10px 1px black;
+   }
+   
+   .slider6:hover{
+       opacity: 1;
+   }
+   
+   .slider6::-webkit-slider-thumb{
+       -webkit-appearance: none;
+       appearance: none;
+       width: 20px;
+       height: 20px;
+       background: black;
+       border-radius: 50%;
+       cursor: pointer;
+   }
+
+   .slideContainer61{
+    width: 75%;
+   }
+   .slider61{
+       -webkit-appearance: none;
+       width: 60%;
+       height: 10px;
+       background: linear-gradient(90deg, rgb(214, 214, 214), rgb(214, 214, 214));
+       outline:  none;
+       opacity: 0.7;
+       -webkit-transition: 0.2s;
+       transition: opacity 0.2s;
+       border-radius: 12px;
+       box-shadow: 0px 1px 10px 1px black;
+   }
+   
+   .slider61:hover{
+       opacity: 1;
+   }
+   
+   .slider61::-webkit-slider-thumb{
+       -webkit-appearance: none;
+       appearance: none;
+       width: 20px;
+       height: 20px;
+       background: black;
+       border-radius: 50%;
+       cursor: pointer;
+   }
+
+   .slideContainer7{
+    width: 75%;
+   } 
+   .slider7{
+       -webkit-appearance: none;
+       width: 60%;
+       height: 10px;
+       background: linear-gradient(90deg, rgb(214, 214, 214), rgb(214, 214, 214));
+       outline:  none;
+       opacity: 0.7;
+       -webkit-transition: 0.2s;
+       transition: opacity 0.2s;
+       border-radius: 12px;
+       box-shadow: 0px 1px 10px 1px black;
+   }
+   
+   .slider7:hover{
+       opacity: 1;
+   }
+   
+   .slider7::-webkit-slider-thumb{
+       -webkit-appearance: none;
+       appearance: none;
+       width: 20px;
+       height: 20px;
+       background: black;
+       border-radius: 50%;
+       cursor: pointer;
+   }
+
+
+   .slideContainer8{
+    width: 75%;
+   }  
+   .slider8{
+       -webkit-appearance: none;
+       width: 60%;
+       height: 10px;
+       background: linear-gradient(90deg, rgb(214, 214, 214), rgb(214, 214, 214));
+       outline:  none;
+       opacity: 0.7;
+       -webkit-transition: 0.2s;
+       transition: opacity 0.2s;
+       border-radius: 12px;
+       box-shadow: 0px 1px 10px 1px black;
+   }
+   
+   .slider8:hover{
+       opacity: 1;
+   }
+   
+   .slider8::-webkit-slider-thumb{
+       -webkit-appearance: none;
+       appearance: none;
+       width: 20px;
+       height: 20px;
+       background: black;
+       border-radius: 50%;
+       cursor: pointer;
+   }
+
+
+   #sum1 {
+    background-color: gray;
+    border: 1px solid black;
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+}
+
+   .button-box{
+    width: 220px;
+    margin: 35px auto;
+    border-radius: 30px;
+    background: gray;
+    position: absolute;
+    left: 140px;
+    margin-top: 10px;
+
+   }
+
+
+   .container{
+    display: inline;
+   }
+   .container p{
+    display: inline-block;
+    padding-left: 20px;
+   }
+
+   .container2{
+    display: inline;
+   }
+   .container2 p{
+    display: inline-block;
+    padding-inline: 20px;
+   }
+
+   .container3 {
+    display: inline;
+   }
+
+   .container3 p{
+    display: inline-block;
+    padding-inline: 20px;
+   }
+
+   .container4 {
+    display: inline;
+   }
+
+   .container4 p{
+    display: inline-block;
+    padding-right: 30px;
+    margin-left: 280px;
+   }
+
+  #lastROI{
+    font-size: 30px;
+    color: red;
+  }
